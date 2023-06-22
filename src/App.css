@@ -1,38 +1,95 @@
-.App {
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+header{
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: aqua;
+}
+header nav{
+  transition-duration: 0.5s;
+}
+.burger{
+  position: absolute;
+  right: 0%;
+  display: none;
+}
+.link{
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.active{
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.hide{
+  display: none;
+}
+.about{
+  margin: 50px 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about h2, .about p{
+  padding: 100px;
+}
+.about h2{
+  font-size: 50px;
+  padding: 100px 200px;
+  /* overflow: hidden; */
+  white-space: nowrap;
+
+}
+.blog-container{
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, 300px);
+  border-radius: 25px;
+  margin: 10px;
+  box-shadow: 12px 12px 20px 20px rgba(0, 0, 255, .2);
+}
+.blog-box{
+  border: 1px solid black;
+  margin: 5px;
+  text-align: justify;
+}
+.blog-box p, .blog-box h3{
+  margin: 5px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.blog-box h3{
+  color: gray;
+  text-align: left;
+}
+.blog-box:hover{
+  transition-duration: 0.5s;
+  transform: scale(1.05);
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width : 500px) {
+  .burger{
+    display: flex;
+    right: 45px;
+    padding: 10px 20px;
   }
-  to {
-    transform: rotate(360deg);
+  nav{
+    margin-top: 50px;
+    display: flex;
+    height: 200px;
+    flex-direction: column;
   }
+ 
 }
